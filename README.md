@@ -1,6 +1,6 @@
 ## Code of Conduct
 
-# Project: Website bán ô tô
+# Project: Website bán tài khoản game
 Giới thiệu:
 
 Họ và tên Sinh viên: Nguyễn Hải Hà
