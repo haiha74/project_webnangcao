@@ -115,35 +115,66 @@ header {
   color: #000;
 }
 
+.logout-btn {
+    padding: 6px 20px;
+    font-size: 16px; /* to hơn */
+    font-weight: 600;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: -50px; /* dịch sang trái */
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+
 </style>
 
 <header>
-  <div class="header-top">
-    <div class="social-icons">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-youtube-play"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-    </div>
-    <div class="hotline">
-      <strong>Hotline:</strong> 0342.075.321 <span style="font-size: 12px; color: #999">(8h - 22h)</span>
-    </div>
-  </div>
-
   <div class="header-middle">
-    <div class="logo">
-      <a href="/">
-        <img src="{{ asset('frontend/images/logo.jpg') }}" alt="Logo">
-      </a>
-    </div>
-    <nav class="navbar">
-      <a href="{{ url('/') }}">Trang chủ</a>
-      <a href="{{ url('/nick-pubg') }}">Nick PUBG</a>
-      <a href="{{ url('/nick-lq') }}">Nick LQ</a>
-      <a href="{{ url('/nap-tien') }}">Nạp tiền</a>
-    </nav>
+      <div class="logo">
+          <a href="/">
+              <img src="{{ asset('frontend/images/logo.jpg') }}" alt="Logo">
+          </a>
+      </div>
+
+      <nav class="navbar">
+          <a href="{{ url('/') }}">Trang chủ</a>
+          <a href="{{ Auth::check() ? url('/nap-tien') : url('/login') }}" 
+            class="btn-nap-tien">
+            Nạp tiền</a>
+
+          <a href="{{ Auth::check() ? url('/lich-su-mua-hang') : url('/login') }}" 
+            class="btn-lich-su-mua-hang">
+            Lịch sử mua hàng</a>
+          
+
+      </nav>
+
     <div class="auth-buttons">
-      <a href="{{ url('/login') }}"><i class="fa fa-user"></i> Đăng nhập</a>
-      <a href="{{ url('/register') }}"><i class="fa fa-key"></i> Đăng ký</a>
-    </div>
+            @if(Auth::check())
+                <form method="POST" action="{{ url('/logout') }}">
+                    @csrf
+                    
+                    <button type="submit" class="btn-auth logout-btn">
+                      <p><span style="margin-right: 8px; font-weight: 600;">👋 Xin chào, {{ Auth::user()->name }}</span></p>
+                        <i class="fa fa-sign-out"></i> Đăng xuất
+                    </button>
+                </form>
+
+            @else
+                <a href="{{ url('/login') }}" class="btn-auth"><i class="fa fa-user"></i> Đăng nhập</a>
+                <a href="{{ url('/register') }}" class="btn-auth"><i class="fa fa-key"></i> Đăng ký</a>
+            @endif
+      </div>
+
   </div>
 </header>

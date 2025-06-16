@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Thêm sản phẩm
+                            Thêm danh mục sản phẩm
                         </header>                       
                         <div class="panel-body"> 
 
@@ -17,50 +17,31 @@
                             ?>
 
                             <div class="position-center">
-                                <form role="form" action="{{URL::to('/save-game')}}" method="post" enctype="multipart/form-data">
-
+                                <form role="form" action="{{URL::to('/luu-category-game')}} " method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="">Tên sản phẩm </label>
-                                    <input type="text" name="game_name" class="form-control" id="exampleInputEmail1">
+                                    <label for="">Tên danh mục</label>
+                                    <input type="text" name="category_game_name" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Giá sản phẩm </label>
-                                    <input type="text" name="game_price" class="form-control" id="exampleInputEmail1">
+                                    <label>Ảnh danh mục</label>
+                                    <input type="file" name="category_image" class="form-control">
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Hình ảnh sản phẩm </label>
-                                    <input type="file" name="game_image" class="form-control" id="exampleInputEmail1" placeholder="Hình ảnh sản phẩm ">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Mô tả sản phẩm</label>
-                                    <textarea style="resize: none" rows = "8" class="form-control" name="game_desc" id="exampleInputPassword1" placeholder="Mô tả sản phẩm"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Nội dung sản phẩm</label>
-                                    <textarea style="resize: none" rows = "8" class="form-control" name="game_content" id="exampleInputPassword1" placeholder="Nội dung sản phẩm"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Danh mục sản phẩm</label>
-                                     <select name="game_cate" class="form-control input-sm m-bot15">
-                                        @foreach($cate_game as $key => $cate)
-                                        <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
-                                        
 
-                                        @endforeach
-                                       
-                                    </select>                                    
-                                </div> 
+                                <div class="form-group">
+                                    <label for="">Mô tả danh mục</label>
+                                    <textarea style="resize: none" rows = "8" class="form-control" name="category_game_desc" id="exampleInputPassword1" placeholder="Mô tả danh mục"></textarea>
+                                </div>
                                 <div class="form-group">
                                     <label for="">Hiển thị</label>
-                                     <select name="game_status" class="form-control input-sm m-bot15">
+                                     <select name="category_game_status" class="form-control input-sm m-bot15">
 
                                         <option value="0">Ẩn</option>
                                         <option value="1">Hiển thị</option>
                                        
                                     </select>                                    
-                                </div>                            
-                                <button type="submit" name="add_game" class="btn btn-info">Thêm sản phẩm</button>
+                                </div>                          
+                                <button type="submit" name="them_tai_khoan_vao_danh_muc_game" class="btn btn-info">Thêm danh mục</button>
                             </form>
                             </div>
 

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\Order;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -50,5 +52,10 @@ class AdminController extends Controller
         Session::put('admin_id',null);
         return Redirect::to('/admin');
     
-    } 
+    }
+    
+    public function lichSuBanHang() {
+    $orders = Order::with('user')->orderBy('created_at', 'desc')->get();
+    return view('admin.order_history', compact('orders'));
+    }
 }

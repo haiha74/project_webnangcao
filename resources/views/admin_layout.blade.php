@@ -20,7 +20,7 @@
 <section id="container">
 <header class="header fixed-top clearfix">
 <div class="brand">
-    <a href="index.html" class="logo">
+    <a href="{{URL::to('/dashboard')}}" class="logo">
         ADMIN
     </a>
     <div class="sidebar-toggle-box">
@@ -69,28 +69,22 @@
 						<li><a href="{{URL::to('/tat-ca-tai-khoan-danh-muc-game')}}">Liệt kê tài khoản trong danh mục game</a></li>                
                     </ul>
                 </li>
-
-				<li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>DANH MỤC GAME RANDOM</span>
-                    </a>
-                    <ul class="sub">
-						<li><a href="{{URL::to('/them-tai-khoan-game-random')}}">Thêm tài khoản game random</a></li>
-						<li><a href="{{URL::to('/tat-ca-tai-khoan-game-random')}}">Liệt kê tài khoản game random</a></li>                
-                    </ul>
-                </li>
-
 				<li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>TÀI KHOẢN GAME</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/them-tai-khoan-game')}}">Thêm sản tài khoản game</a></li>
-						<li><a href="{{URL::to('/tat-ca-tai-khoan-game')}}">Liệt kê tài khoản game</a></li>                
+						<li><a href="{{URL::to('/add-account')}}">Thêm tài khoản game</a></li>
+						<li><a href="{{URL::to('/all-account')}}">Liệt kê tài khoản game</a></li>                
                     </ul>
-                </li>               
+                </li>
+                <li>
+                    <a href="{{ route('admin.lich-su-ban-hang') }}">
+                        <i class="fa fa-shopping-cart"></i> Giỏ hàng đã bán
+                    </a>
+                </li>
+               
             </ul>            
 		</div>
     </div>

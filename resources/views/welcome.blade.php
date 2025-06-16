@@ -25,20 +25,42 @@
     </div>
 
 <!-- Danh Mục Game -->
+    @php
+        $links = [
+            5 => '/acc-pubg',
+            6 => '/acc-lien-quan',
+            7 => '/acc-free-fire',
+            8 => '/acc-lien-minh'
+        ];
+    @endphp
+
     <div class="features_items">
-      <h2 class="title text-center">Danh Mục Game</h2>
+      <h2 class="title text-center">DANH MỤC GAME</h2>
       <div class="row">
-        @foreach($categories as $cat)
+        @foreach($categories as $index => $cat)
           <div class="col-sm-3">
             <div class="product-image-wrapper">
               <div class="single-products">
                 <div class="productinfo text-center">
-                  <img src="{{ $cat['image'] }}" alt="{{ $cat['name'] }}" width="220" height="190" />
-                  <h2>{{ $cat['name'] }}</h2>
-                  <p>Tổng acc: {{ $cat['total'] }} - Đã bán: {{ $cat['sold'] }}</p>
-                  <a href="#" class="btn btn-default add-to-cart">
-                    <i class="fa fa-gamepad"></i> Xem tất cả
+                  <img src="{{ asset('uploads/category/' . $cat->category_image) }}" alt="{{ $cat->category_name }}" style="max-width: 100%; height: 180px; object-fit: cover;">
+                  <h4>{{ $cat->category_name }}</h4>
+
+                  @if($index == 0)
+                    <p>Tổng acc: 28120 - Đã bán: 24092</p>
+                  @elseif($index == 1)
+                    <p>Tổng acc: 23948 - Đã bán: 19384</p>
+                  @elseif($index == 2)
+                    <p>Tổng acc: 46284 - Đã bán: 39274</p>
+                  @elseif($index == 3)
+                    <p>Tổng acc: 36274 - Đã bán: 28365</p>
+                  @else
+                    <p>Tổng acc: 27361 - Đã bán: 19284</p>
+                  @endif
+
+                  <a href="{{ url($links[$cat->category_id] ?? '#') }}" class="btn btn-default add-to-cart">
+                      <i class="fa fa-gamepad"></i> Xem tất cả
                   </a>
+
                 </div>
               </div>
             </div>
@@ -46,6 +68,7 @@
         @endforeach
       </div>
     </div>
+
 
 <!-- ================= DANH MỤC GAME RANDOM ================= -->
     <section class="features_items">
@@ -59,7 +82,7 @@
                 <h5>{{ $item['name'] }}</h5>
                 <p>Thử vận may: {{ $item['title'] }}</p>
                 <p>Giá: {{ number_format($item['price']) }} VNĐ</p>
-                <a href="#" class="btn"><i class="fa fa-random"></i> Xem tất cả</a>
+                <a href="{{ url('/random-out-stock') }}" class="btn"><i class="fa fa-random"></i> Xem tất cả</a>
               </div>
             </div>
           </div>

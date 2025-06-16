@@ -21,11 +21,12 @@ class CategoryGame extends Controller
         return view('admin.them_tai_khoan_vao_danh_muc_game');
     }
 
-    public function tat_ca_tai_khoan_danh_muc_game (){
+    // Hiển thị tất cả danh mục
+    public function tat_ca_tai_khoan_danh_muc_game() {
         $this->Authlogin();
-        $all_category_game = DB::table('tbl_category_game')->get();
-        $manager_category_game = view('admin.tat_ca_tai_khoan_danh_muc_game')->with('tat_ca_tai_khoan_danh_muc_game' ,$tat_ca_tai_khoan_danh_muc_game);
-        return view('admin_layout')->with('admin.tat_ca_tai_khoan_danh_muc_game' ,$manager_category_game);
+        $tat_ca_tai_khoan_danh_muc_game = DB::table('tbl_category_game')->get();
+        $manager_category_game = view('admin.tat_ca_tai_khoan_danh_muc_game')->with('tat_ca_tai_khoan_danh_muc_game', $tat_ca_tai_khoan_danh_muc_game);
+        return view('admin_layout')->with('admin.tat_ca_tai_khoan_danh_muc_game', $manager_category_game);
     }
 
     public function luu_category_game (Request $request){
@@ -34,39 +35,79 @@ class CategoryGame extends Controller
         $data['category_name'] = $request->category_game_name;
         $data['category_desc'] = $request->category_game_desc;
         $data['category_status'] = $request->category_game_status;
+        $get_image = $request->file('category_image');
+            if($get_image){
+                $get_name = $get_image->getClientOriginalName();
+                $name_image = current(explode('.', $get_name));
+                $new_image = $name_image . time() . '.' . $get_image->getClientOriginalExtension();
+                $get_image->move('uploads/category', $new_image);
+                $data['category_image'] = $new_image;
+            }
 
         DB::table('tbl_category_game')->insert($data);
         Session::put('message', 'Thêm tài khoản danh mục game thành công');
         return Redirect::to('them-tai-khoan-vao-danh-muc-game');
     }
 
-    public function edit_category_game ($category_game_id){
-        $this->Authlogin();
-        $edit_category_game = DB::table('tbl_category_game')->where('category_id' ,$category_game_id)->get();
-        $manager_category_game = view('admin.sua_tai_khoan_danh_muc_game')->with('sua_tai_khoan_danh_muc_game' ,$sua_tai_khoan_danh_muc_game);
-        return view('admin_layout')->with('admin.sua_tai_khoan_danh_muc_game' ,$manager_category_game);
-    }
+    public function sua_tai_khoan_danh_muc_game($category_game_id){
+    $this->Authlogin();
 
-    public function cap_nhat_category_game (Request $request,$category_game_id){
+    $sua_tai_khoan_danh_muc_game = DB::table('tbl_category_game')->where('category_id', $category_game_id)->first();
+    return view('admin_layout')
+        ->with('admin.sua_tai_khoan_danh_muc_game', view('admin.sua_tai_khoan_danh_muc_game')
+        ->with('sua_tai_khoan_danh_muc_game', $sua_tai_khoan_danh_muc_game));
+}
+
+
+    public function capnhat_category_game (Request $request,$category_game_id){
         $this->Authlogin();
         $data = array();
         $data['category_name'] = $request->category_game_name;
         $data['category_desc'] = $request->category_game_desc;
+        $get_image = $request->file('category_image');
+            if($get_image){
+                $get_name = $get_image->getClientOriginalName();
+                $name_image = current(explode('.', $get_name));
+                $new_image = $name_image . time() . '.' . $get_image->getClientOriginalExtension();
+                $get_image->move('uploads/category', $new_image);
+                $data['category_image'] = $new_image;
+            }
 
         DB::table('tbl_category_game')->where('category_id' ,$category_game_id)->update($data);
         Session::put('message', 'Cập nhật tài khoản danh mục game thành công');
-        return Redirect::to('tat_ca_tai_khoan_danh_muc_game');
+        return Redirect::to('tat-ca-tai-khoan-danh-muc-game');
     }
 
-    public function delete_category_game ($category_game_id){
+    public function xoa_tai_khoan_danh_muc_game ($category_game_id){
         $this->Authlogin();
         DB::table('tbl_category_game')->where('category_id' ,$category_game_id)->delete();
         Session::put('message', 'Xóa tài khoản danh mục game thành công');
-        return Redirect::to('tat_ca_tai_khoan_danh_muc_game');
+        return Redirect::to('tat-ca-tai-khoan-danh-muc-game');
         
     }
 
-    // end fuction admin page
+    public function unactive_category_game($category_game_id){
+        $this->Authlogin();
+    
+        DB::table('tbl_category_game')
+            ->where('category_id', $category_game_id)
+            ->update(['category_status' => 1]);
+
+        Session::put('message', 'Không kích hoạt danh mục sản phẩm thành công');
+        return Redirect::to('tat-ca-tai-khoan-danh-muc-game');
+    }
+
+    public function active_category_game($category_game_id){
+        $this->Authlogin();
+
+        DB::table('tbl_category_game')
+            ->where('category_id', $category_game_id)
+            ->update(['category_status' => 0]);
+
+        Session::put('message', 'Kích hoạt danh mục sản phẩm thành công');
+        return Redirect::to('tat-ca-tai-khoan-danh-muc-game');
+    }
+
     public function show_category_home($category_id){
     $cate_game = DB::table('tbl_category_game')
         ->where('category_status','0')
