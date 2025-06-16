@@ -9,14 +9,19 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\OrderController;
 
+//Home
 Route::get('/', [HomeController::class, 'index']);
 
-//Backend
+//ADMIN
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/dashboard', [AdminController::class, 'show_dashboard']);
 Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
 Route::get('/logout', [AdminController::class, 'logout']);
 Route::get('/admin/lich-su-ban-hang', [App\Http\Controllers\AdminController::class, 'lichSuBanHang'])->name('admin.lich-su-ban-hang');
+Route::get('/admin/deposit-requests', [DepositController::class, 'index']);
+Route::post('/admin/deposit-approve/{id}', [DepositController::class, 'approve']);
+Route::get('/admin/duyet-nap', [TopupController::class, 'danhSach'])->middleware(['auth', 'admin']);
+
 
 
 //Danh muc game
@@ -66,6 +71,24 @@ Route::post('/logout', function () {
 Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])->name('xu-ly-mua-hang');
 Route::get('/lich-su-mua-hang', [OrderController::class, 'lichSu'])->name('lich-su-mua-hang')->middleware('auth');
 
+//Nap tien
+Route::get('/nap-tien', function () {
+    return "
+    <div style='text-align:center; margin-top:50px; font-family: Arial, sans-serif;'>
+        <h2>🚧 Tính năng đang được phát triển, vui lòng chờ đợi! 🚧</h2>
+        <a href='/' style='
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff3d00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        '>⬅️ Về trang chủ</a>
+    </div>
+    ";
+});
 
 
 

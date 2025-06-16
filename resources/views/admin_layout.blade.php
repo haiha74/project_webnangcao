@@ -79,6 +79,7 @@
 						<li><a href="{{URL::to('/all-account')}}">Liệt kê tài khoản game</a></li>                
                     </ul>
                 </li>
+
                 <li>
                     <a href="{{ route('admin.lich-su-ban-hang') }}">
                         <i class="fa fa-shopping-cart"></i> Giỏ hàng đã bán
