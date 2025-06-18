@@ -53,8 +53,6 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 ## Sơ đồ chức năng
 ![image](https://github.com/user-attachments/assets/3ffa623c-d000-4669-a8f3-bbb2a74c20b3)
 
-Class Diagram of Objects
-
 ## Sơ đồ thuật toán
 
 Create Cart (user / car /user-car)
