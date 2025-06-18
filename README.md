@@ -58,7 +58,8 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 ![image](https://github.com/user-attachments/assets/1f8e9cf9-660d-419b-a056-3f87ae402d66)
 
 ## CRUD Sản phẩm (Admin)
-![CRUD Sản phẩm (Admin)](https://github.com/user-attachments/assets/e5392394-5417-4304-98b0-0481ffbbcc0d)
+![image](https://github.com/user-attachments/assets/5ee306af-202d-4333-b550-23d8a0ef0e4d)
+
 
 Create Cart (user / car /user-car)
 Activity Diagram
