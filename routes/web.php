@@ -10,10 +10,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\OrderController;
 
 //Home
-//Route::get('/', [HomeController::class, 'index']);
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+
 
 //ADMIN
 Route::get('/admin', [AdminController::class, 'index']);
