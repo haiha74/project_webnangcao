@@ -754,8 +754,57 @@ return new class extends Migration
 @endsection
 ```
 
-# Security Setup
+# 🔐Security Setup
+**CSRF**
+```
+<form method="POST" action="/login">
+            @csrf
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
 
+            <label for="password">Mật khẩu:</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Đăng nhập</button>
+        </form>
+```
+**Chống XSS. Ví dụ : order.blade.php**
+```
+<tbody>
+                @foreach($orders as $order)
+                    <tr>
+                        <td>{{ $order->account_name }}</td>
+                        <td>{{ $order->account_desc }}</td>
+                        <td>{{ $order->account_content }}</td>
+                        <td>{{ number_format($order->account_price) }} VNĐ</td>
+                        <td>{{ $order->created_at }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+```
+**SQL Injection. Ví dụ AccountGameController**
+```
+public function add_account (){
+        $this->Authlogin();
+        $cate_game = DB::table('tbl_category_game')->orderby('category_id','desc')->get();
+
+        return view('admin.add_account')->with('cate_game', $cate_game);
+    }
+
+    public function all_account (){
+        $this->Authlogin();
+        $all_account = DB::table('tbl_account')->orderby('account_id', 'desc')->get();
+        $manager_account = view('admin.all_account')->with('all_account', $all_account);
+        return view('admin_layout')->with('admin.all_account', $manager_account);
+    }
+```
+**Session & Cookie**
+```
+Route::get('/lich-su-mua-hang', [OrderController::class, 'lichSu'])->name('lich-su-mua-hang')->middleware('auth');
+Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])
+    ->middleware('auth')
+    ->name('xu-ly-mua-hang');
+```
 # Link
 ## Link Demo : Youtube link
 ## Public Web (deployment) link: 
