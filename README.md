@@ -46,7 +46,10 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 | Eloquent ORM              | Truy vấn và xử lý dữ liệu theo mô hình OOP    |
 | Middleware                | Bảo vệ CSRF, phân quyền truy cập              |
 
+# 🧩 Sơ đồ hệ thống website
 # Sơ đồ khối
+
+
 
 ## Sơ đồ chức năng
 
@@ -70,7 +73,7 @@ Authentication/Authorisation
 # Một số Code chính minh họa
 
 ## Model
-Cart
+<pre lang="md"> ```php <?php namespace App\Models; use Illuminate\Database\Eloquent\Model; class Order extends Model { protected $fillable = [ 'customer_name', 'customer_email', 'customer_phone', 'customer_address', 'payment_method', 'total_amount', 'status', ]; } ``` </pre>
 ## Controller
 Phương thức CRUD
 
