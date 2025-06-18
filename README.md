@@ -796,6 +796,7 @@ Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])
 # Link
 ## Link Demo : Youtube link : https://youtu.be/_gs9mg6kN3w
 ## Link Demo : Github link : https://github.com/haiha74/project_webnangcao.git
+## Link Github page : [https://haiha74.github.io/project_webnangcao/](https://haiha74.github.io/project_webnangcao/)
 
 ## Public Web (deployment) link: 
 
