@@ -806,7 +806,9 @@ Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])
     ->name('xu-ly-mua-hang');
 ```
 # Link
-## Link Demo : Youtube link
+## Link Demo : Youtube link : https://youtu.be/_gs9mg6kN3w
+## Link Demo : Github link : https://github.com/haiha74/project_webnangcao.git
+
 ## Public Web (deployment) link: 
 
 # Một số hình ảnh chức năng chính
