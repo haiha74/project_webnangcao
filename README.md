@@ -56,23 +56,11 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 ## Sơ đồ thuật toán
 # Đăng nhập/Đăng ký
 ![image](https://github.com/user-attachments/assets/1f8e9cf9-660d-419b-a056-3f87ae402d66)
+# Người dùng truy cập trang web khi đã đăng nhập
+![Screenshot 2025-06-19 034854](https://github.com/user-attachments/assets/6adeccc8-3012-4cc6-a732-5621f3c4bfa6)
 
 # CRUD Sản phẩm (Admin)
 ![Screenshot 2025-06-19 010144](https://github.com/user-attachments/assets/f3db546f-7fe1-4141-84ab-b1bf1085fd93)
-
-
-
-Create Cart (user / car /user-car)
-Activity Diagram
-
-Edit Cart
-Activity Diagram
-
-Delete Cart
-
-Activity Diagram
-
-Authentication/Authorisation
 
 
 # Một số Code chính minh họa
