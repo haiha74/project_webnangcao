@@ -810,10 +810,21 @@ Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])
 ## Public Web (deployment) link: 
 
 # Một số hình ảnh chức năng chính
-
-
-
-
+## Trang đăng nhập , đăng kí
+![image](https://github.com/user-attachments/assets/4a6abc8c-b0de-4153-8850-aa63d84e00f6)
+![image](https://github.com/user-attachments/assets/acc29781-af1d-43da-991f-e53e1301acb3)
+## Trang chủ
+![image](https://github.com/user-attachments/assets/44c3b06b-5d9d-4123-8a40-23fa3d0a0688)
+## Trang sản phẩm
+![image](https://github.com/user-attachments/assets/6ff142f1-c075-42d4-856d-c81a870e31e8)
+## Trang lịch sử mua hàng
+![image](https://github.com/user-attachments/assets/5c1b2b45-6856-4f28-aa43-afdbc7854db3)
+## Trang đăng nhập Admin
+![image](https://github.com/user-attachments/assets/7bec1a4d-e67c-472e-a466-5fedfa9ba2a5)
+## Trang quản lí đơn hàng
+![image](https://github.com/user-attachments/assets/c5d4cd87-4a0c-41c5-b6a2-20efb88f8de6)
+## Trang CRUD Account
+![image](https://github.com/user-attachments/assets/3d5e846c-acb5-4ca4-af35-f699830210bc)
 
 
 # License & Copy Rights
