@@ -57,9 +57,9 @@ Route::get('/random-out-stock', function () {
 
 
 //User
-Route::get('/login', [AuthController::class, 'showLogin']);
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-Route::get('/register', [AuthController::class, 'showRegister']);
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', function () {
     Auth::logout();
@@ -68,8 +68,12 @@ Route::post('/logout', function () {
 
 
 //Order
-Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])->name('xu-ly-mua-hang');
+//Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])->name('xu-ly-mua-hang');
 Route::get('/lich-su-mua-hang', [OrderController::class, 'lichSu'])->name('lich-su-mua-hang')->middleware('auth');
+Route::post('/xac-nhan-mua-hang', [OrderController::class, 'xuLyMuaHang'])
+    ->middleware('auth')
+    ->name('xu-ly-mua-hang');
+
 
 //Nap tien
 Route::get('/nap-tien', function () {

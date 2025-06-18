@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h2 class="text-center mb-4">Danh sách tài khoản LIÊN QUÂN</h2>
+    <h2 class="text-center mb-4">Danh sách tài khoản LIÊN MINH</h2>
     <div class="row justify-content-center">
         @foreach($accounts as $acc)
             <div class="col-md-3 col-sm-6 text-center mb-4">

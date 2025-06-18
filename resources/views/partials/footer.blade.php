@@ -72,12 +72,12 @@
       </div>
       <div class="col-md-4">
         <h3>Liên hệ</h3>
-        <p>Hotline: 0342.075.321<br>Email: nguyenhaihabdh@gmail.com<br>Thời gian: 8h - 22h mỗi ngày</p>
+        <p>Hotline: 0342.075.321<br>Email: 23010469@st.phenikaa-uni.edu.vn<br>Thời gian: 8h - 22h mỗi ngày</p>
       </div>
       <div class="col-md-4">
         <h3>Kết nối với chúng tôi</h3>
         <div class="social-networks">
-          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.facebook.com/haiha7474"><i class="fa fa-facebook"></i></a>
           <a href="#"><i class="fa fa-youtube-play"></i></a>
         </div>
       </div>
