@@ -40,7 +40,7 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 | **Công nghệ**             | **Mô tả**                                      |
 |---------------------------|-----------------------------------------------|
 | Laravel (PHP)             | Backend framework chính                       |
-| Laravel Breeze            | Hệ thống xác thực người dùng và session       |
+| Tự xây hệ thống auth      | Viết tay chức năng đăng ký, đăng nhập, đăng xuất và phân quyền       |
 | Blade + Tailwind CSS      | Giao diện người dùng, responsive và hiện đại  |
 | MySQL (Aiven)             | Cơ sở dữ liệu lưu trữ trên nền tảng cloud     |
 | Eloquent ORM              | Truy vấn và xử lý dữ liệu theo mô hình OOP    |
