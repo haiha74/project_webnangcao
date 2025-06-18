@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: laravel-app
+    env: docker
+    plan: free
+    autoDeploy: true
+    buildCommand: ""
+    startCommand: "php artisan serve --host=0.0.0.0 --port=8000"
