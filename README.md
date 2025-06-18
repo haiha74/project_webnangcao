@@ -57,7 +57,7 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 # Đăng nhập/Đăng ký
 ![image](https://github.com/user-attachments/assets/1f8e9cf9-660d-419b-a056-3f87ae402d66)
 
-## CRUD Sản phẩm (Admin)
+# CRUD Sản phẩm (Admin)
 ![Screenshot 2025-06-19 010144](https://github.com/user-attachments/assets/f3db546f-7fe1-4141-84ab-b1bf1085fd93)
 
 
