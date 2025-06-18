@@ -94,7 +94,8 @@ class Order extends Model
 }
 ```
 ## Controller-Order
-```<?php
+```
+<?php
 namespace App\Http\Controllers;
 
 use App\Models\Order;
@@ -133,7 +134,8 @@ class OrderController extends Controller
 }
 ```
 ## Migration - Bảng Order
-```<?php
+```
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
