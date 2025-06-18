@@ -1,4 +1,4 @@
-## 🕹️ **Website Bán Tài Khoản Game – GameZone Store**
+## 🕹️ **Website Bán Tài Khoản Game – ShopAccGame**
 
 ## 👨‍🎓 Thông tin sinh viên
 
@@ -7,7 +7,7 @@
 - **Lớp:** K17-CNTT5 
 - **Môn học:** Thiết kế Web nâng cao (TH3)
 ## 📄 Giới thiệu dự án
-**GameZone Store** là một website thương mại điện tử đơn giản chuyên bán các tài khoản game như PUBG, Liên Quân, Free Fire,... Dự án được phát triển bằng **Laravel Framework** với thiết kế hiện đại, dễ sử dụng và tích hợp các công nghệ phổ biến:
+**ShopAccGame** là một website thương mại điện tử đơn giản chuyên bán các tài khoản game như PUBG, Liên Quân, Free Fire,... Dự án được phát triển bằng **Laravel Framework** với thiết kế hiện đại, dễ sử dụng và tích hợp các công nghệ phổ biến:
 
 - **Laravel Breeze** – Đăng ký / đăng nhập người dùng và phân quyền cơ bản
 - **Blade Template Engine** – Tạo bố cục và view tái sử dụng
