@@ -54,6 +54,8 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 ![image](https://github.com/user-attachments/assets/3ffa623c-d000-4669-a8f3-bbb2a74c20b3)
 
 ## Sơ đồ thuật toán
+# Đăng nhập/Đăng ký
+![image](https://github.com/user-attachments/assets/1f8e9cf9-660d-419b-a056-3f87ae402d66)
 
 Create Cart (user / car /user-car)
 Activity Diagram
