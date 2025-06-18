@@ -135,8 +135,4 @@ class CategoryGame extends Controller
         ->with('category_by_id', $category_by_id)
         ->with('category_name', $category_name);
 }
-
-    
-
-
 }
