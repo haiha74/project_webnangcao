@@ -130,7 +130,31 @@ class OrderController extends Controller
         $orders = Order::where('user_id', Auth::id())->latest()->get();
         return view('pages.history.orders', compact('orders'));
     }
-}```
+}
+```
+## Migration - Bảng Order
+```<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('account_id');
+            $table->string('account_name');
+            $table->text('account_desc')->nullable();
+            $table->string('account_price');
+            $table->timestamps();
+        });
+    }
+};
+```
 
 Phương thức CRUD
 
