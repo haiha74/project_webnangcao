@@ -9,17 +9,43 @@
 ## 📄 Giới thiệu dự án
 **GameZone Store** là một website thương mại điện tử đơn giản chuyên bán các tài khoản game như PUBG, Liên Quân, Free Fire,... Dự án được phát triển bằng **Laravel Framework** với thiết kế hiện đại, dễ sử dụng và tích hợp các công nghệ phổ biến:
 
-- **Blade Template Engine** – Giao diện động, dễ tái sử dụng
-- **Tailwind CSS** – Thiết kế responsive, hiện đại
-- **Eloquent ORM** – Tương tác cơ sở dữ liệu thông qua mô hình đối tượng
-- **MySQL (Cloud – Aiven)** – Quản lý dữ liệu trên nền tảng đám mây
-- **Hệ thống bảo mật tích hợp**:
-  - CSRF Token – Ngăn chặn giả mạo yêu cầu
-  - Session & Cookie – Quản lý trạng thái người dùng
-  - Validation – Kiểm tra dữ liệu đầu vào
-  - Chống **SQL Injection** và **XSS**
+- **Laravel Breeze** – Đăng ký / đăng nhập người dùng và phân quyền cơ bản
+- **Blade Template Engine** – Tạo bố cục và view tái sử dụng
+- **Tailwind CSS** – Thiết kế giao diện responsive, hiện đại
+- **Eloquent ORM** – Quản lý dữ liệu theo mô hình đối tượng
+- **MySQL (Cloud – Aiven)** – Cơ sở dữ liệu lưu trực tuyến
+- **Bảo mật hệ thống**:
+  - Token CSRF – bảo vệ form
+  - Session & Cookie – quản lý trạng thái đăng nhập
+  - Validation – kiểm tra dữ liệu đầu vào
+  - Phòng chống **SQL Injection** & **XSS**
 
 Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ hàng và tiến hành thanh toán sau khi đăng nhập. Quản trị viên có thể đăng nhập vào hệ thống để thực hiện các thao tác **thêm / sửa / xóa sản phẩm và đơn hàng**.
+
+## 🧩 Chức năng chính
+
+### 👤 Người dùng
+- Đăng ký và đăng nhập
+- Duyệt danh sách tài khoản game
+- Thanh toán đơn hàng
+- Xem lịch sử mua hàng
+
+### 🛠 Quản trị viên (Admin)
+- Đăng nhập riêng để quản trị
+- CRUD sản phẩm game (tài khoản)
+- Quản lý đơn hàng và người dùng
+
+## 🛠️ Công nghệ sử dụng
+
+| **Công nghệ**             | **Mô tả**                                      |
+|---------------------------|-----------------------------------------------|
+| Laravel (PHP)             | Backend framework chính                       |
+| Laravel Breeze            | Hệ thống xác thực người dùng và session       |
+| Blade + Tailwind CSS      | Giao diện người dùng, responsive và hiện đại  |
+| MySQL (Aiven)             | Cơ sở dữ liệu lưu trữ trên nền tảng cloud     |
+| Eloquent ORM              | Truy vấn và xử lý dữ liệu theo mô hình OOP    |
+| Middleware                | Bảo vệ CSRF, phân quyền truy cập              |
+
 # Sơ đồ khối
 
 ## Sơ đồ chức năng
