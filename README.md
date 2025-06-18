@@ -98,6 +98,72 @@ class Order extends Model
     ];
 }
 ```
+## Model-Account
+```
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Account extends Model
+{
+    protected $table = 'tbl_account';
+    protected $primaryKey = 'account_id';
+    public $timestamps = false;
+
+    protected $fillable = [
+        'account_name',
+        'account_price',
+        'account_desc',
+        'account_content',
+        'category_id',
+        'account_status',
+        'account_image',
+    ];
+}
+```
+## Model-User
+```
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends Authenticatable
+{
+    use HasFactory, Notifiable;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'balance',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+
+ 
+    public function depositRequests()
+    {
+        return $this->hasMany(DepositRequest::class);
+    }
+}
+```
 ## Controller-Order
 ```
 <?php
