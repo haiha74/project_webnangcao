@@ -1,11 +1,13 @@
-## Code of Conduct
 
-# Project: Website bán tài khoản game
-Giới thiệu:
+🕹️ **Website Bán Tài Khoản Game – GameZone Store**
 
-Họ và tên Sinh viên: Nguyễn Hải Hà
-Mã Sinh viên : 23010469
-Lớp : Thiết kế web nâng cao-1-3-24(COUR01.TH3)
+## 👨‍🎓 Thông tin sinh viên
+
+- **Họ và tên:** Nguyễn Hải Hà  
+- **Mã sinh viên:** 23010469  
+- **Lớp:** K17-CNTT5 
+- **Môn học:** Thiết kế Web nâng cao (TH3)
+
 # Sơ đồ khối
 
 ## Sơ đồ chức năng
