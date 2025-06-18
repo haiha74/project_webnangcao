@@ -9,7 +9,7 @@
 ## 📄 Giới thiệu dự án
 **ShopAccGame** là một website thương mại điện tử đơn giản chuyên bán các tài khoản game như PUBG, Liên Quân, Free Fire,... Dự án được phát triển bằng **Laravel Framework** với thiết kế hiện đại, dễ sử dụng và tích hợp các công nghệ phổ biến:
 
-- **Laravel Breeze** – Đăng ký / đăng nhập người dùng và phân quyền cơ bản
+- **Tự xây hệ thống auth** – Viết tay chức năng đăng ký, đăng nhập, đăng xuất và phân quyền
 - **Blade Template Engine** – Tạo bố cục và view tái sử dụng
 - **Tailwind CSS** – Thiết kế giao diện responsive, hiện đại
 - **Eloquent ORM** – Quản lý dữ liệu theo mô hình đối tượng
@@ -17,7 +17,6 @@
 - **Bảo mật hệ thống**:
   - Token CSRF – bảo vệ form
   - Session & Cookie – quản lý trạng thái đăng nhập
-  - Validation – kiểm tra dữ liệu đầu vào
   - Phòng chống **SQL Injection** & **XSS**
 
 Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ hàng và tiến hành thanh toán sau khi đăng nhập. Quản trị viên có thể đăng nhập vào hệ thống để thực hiện các thao tác **thêm / sửa / xóa sản phẩm và đơn hàng**.
