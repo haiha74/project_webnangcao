@@ -73,7 +73,26 @@ Authentication/Authorisation
 # Một số Code chính minh họa
 
 ## Model
-<pre lang="md"> ```php <?php namespace App\Models; use Illuminate\Database\Eloquent\Model; class Order extends Model { protected $fillable = [ 'customer_name', 'customer_email', 'customer_phone', 'customer_address', 'payment_method', 'total_amount', 'status', ]; } ``` </pre>
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Order extends Model
+{
+    protected $fillable = [
+        'customer_name',
+        'customer_email',
+        'customer_phone',
+        'customer_address',
+        'payment_method',
+        'total_amount',
+        'status',
+    ];
+}
+```
 ## Controller
 Phương thức CRUD
 
