@@ -50,10 +50,8 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 # Sơ đồ khối
 ![image](https://github.com/user-attachments/assets/ecc7353b-de95-4c1c-ae5f-896169911f18)
 
-
-
-
 ## Sơ đồ chức năng
+![image](https://github.com/user-attachments/assets/3ffa623c-d000-4669-a8f3-bbb2a74c20b3)
 
 Class Diagram of Objects
 
