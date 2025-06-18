@@ -48,6 +48,8 @@ Người dùng có thể duyệt danh sách tài khoản game, thêm vào giỏ 
 
 # 🧩 Sơ đồ hệ thống website
 # Sơ đồ khối
+![image](https://github.com/user-attachments/assets/ecc7353b-de95-4c1c-ae5f-896169911f18)
+
 
 
 
